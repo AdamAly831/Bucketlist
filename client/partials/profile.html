@@ -1,0 +1,23 @@
+<div ng-controller="profilesController">
+	<h1> {{name}}'s Bucket list</h1>
+
+	<h2>Done</h2>
+
+	<div ng-repeat = "item in items">
+		<div ng-if = "item.complete == true">
+			{{item.user_name}} | {{item.title}} - {{item.description}} - {{item.created_at|date:"MMMM dd, yyyy"}}
+		</div>
+	</div>
+
+	<h2>Pending</h2>
+
+	<div ng-repeat = "item in items">
+		<div ng-if = "item.complete == false">
+			{{item.user_name}} | {{item.title}} - {{item.description}} - {{item.created_at|date:"MMMM dd, yyyy"}}
+		</div>
+	</div>
+
+
+
+
+</div>
